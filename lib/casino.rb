@@ -31,7 +31,8 @@ module CASino
     },
     ticket_granting_ticket: {
       lifetime: 86400,
-      lifetime_long_term: 864000
+      lifetime_long_term: 864000,
+      lifetime_short_term: 86400,
     },
     service_ticket: {
       lifetime_unconsumed: 300,

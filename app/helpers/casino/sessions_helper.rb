@@ -46,6 +46,8 @@ module CASino::SessionsHelper
     cookies[:tgt] = { value: tgt.ticket }.tap do |cookie|
       if tgt.long_term?
         cookie[:expires] = CASino.config.ticket_granting_ticket[:lifetime_long_term].seconds.from_now
+      else
+        cookie[:expires] = CASino.config.ticket_granting_ticket[:lifetime_short_term].seconds.from_now
       end
     end
   end
